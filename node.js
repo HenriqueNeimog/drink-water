@@ -25,6 +25,9 @@ const WATER_QUANTITY_ML = process.env.WATER_QUANTITY_ML ? parseInt(process.env.W
 const INITIAL_HOUR = process.env.INITIAL_HOUR ? parseInt(process.env.INITIAL_HOUR) : 8;
 const FINAL_HOUR = process.env.FINAL_HOUR ? parseInt(process.env.FINAL_HOUR) : 20;
 
+const TIMEZONE = process.env.TZ || 'America/Sao_Paulo';
+process.env.TZ = TIMEZONE;
+
 const messages = [
     "⏰ Hora de se hidratar! Beba pelo menos {ML}ml de água agora.",
     "💧 Seu corpo precisa de água! Que tal consumir {ML}ml neste momento?",
